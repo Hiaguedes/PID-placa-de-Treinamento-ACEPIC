@@ -33,8 +33,6 @@ int stpi;
 float erro;
 int erroi;
 
-
-
 float I=0;
 int Ii;
 
@@ -63,12 +61,12 @@ float temp_old;
 int b=0;
 
 // Frequencia do oscilador = 8MHz
-// Ciclo de máquina  = 1/(Fosc/4) = 0,5us
+// Ciclo de mï¿½quina  = 1/(Fosc/4) = 0,5us
 #pragma config OSC = HS        	//Configura o oscilador a cristal 
 #pragma config WDT = OFF  		//Desabilita o Watchdog Timer (WDT).
 #pragma config PWRT = ON   		//Habilita o Power-up Timer (PWRT).
 #pragma config BOREN = ON		//Habilita Brown-out reset 
-#pragma config BORV = 1        	//Tensão do BOR é 4,33V.
+#pragma config BORV = 1        	//Tensï¿½o do BOR ï¿½ 4,33V.
 #pragma config PBADEN = OFF 	//RB0,1,2,3 e 4 configurado como I/O digital.
 #pragma config LVP = OFF       	//Desabilita o Low Voltage Program.
 
@@ -108,7 +106,7 @@ PORTCbits.RC1=0;
 
 
 TRISB=0xff;					//CONFIGURA  PORTA B COMO ENTRADA
-TRISCbits.TRISC2 = 0;		//CONFIGURA  PORTA C COMO SAÍDA
+TRISCbits.TRISC2 = 0;		//CONFIGURA  PORTA C COMO SAï¿½DA
 TRISCbits.TRISC1 = 0;
 //ADCON1 = 0x0D;
  
@@ -166,7 +164,7 @@ if(PORTBbits.RB2 == 0){
 //endprova
 
 
-if (PORTBbits.RB1 == 0)	//Se o botão for pressionado (se B0 for igual a '0')
+if (PORTBbits.RB1 == 0)	//Se o botï¿½o for pressionado (se B0 for igual a '0')
   c++; // variavel de selecao de menu
 if(c>2){c=0;}
     
@@ -200,8 +198,6 @@ if(c>2){c=0;}
 
 		stpi=(int)stp;
 
-
-		
 		AD=(temp-temp2)*KD;               //Determinacao do AD 
         ADi=(int)AD;
 
@@ -275,10 +271,6 @@ case 2:
 
 	
 }
-
-
- 
-
 
     		}  
 }
